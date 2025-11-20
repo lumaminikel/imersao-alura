@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Base de Conhecimento</title>
+</head>
+
+<body>
+    <header>
+        <h1>Base de Conhecimento - Percy Jackson</h1>
+        <div>
+            <input type="text" placeholder="Busque por livros, personagens, etc.">
+            <button id="botao-busca" onclick="iniciarBusca">Buscar</button>
+        </div>
+    </header>
+    <main>
+        <section class="book-grid">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <ul class="footer-links">
+            <li>
+                <a href="https://rickriordan.com/">Site do Autor</a>
+            </li>
+            <li>
+                <a href="https://disneybooks.disney.com/">Editora</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="script.js">
+        document.addEventListener('DOMContentLoaded', () => {
+            const bookGrid = document.querySelector('.book-grid');
+
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    data.books.forEach(book => {
+                        const bookCard = document.createElement('article');
+                        bookCard.classList.add('book-card');
+
+                        bookCard.innerHTML = `
+                            <img src="${book.image_url}" alt="${book.title}">
+                            <h2>${book.title}</h2>
+                            <p>${book.description}</p>
+                            <a href="#">Leia mais</a>
+                        `;
+
+                        bookGrid.appendChild(bookCard);
+                    });
+                })
+                .catch(error => console.error('Error loading book data:', error));
+        });
+    </script>
+</body>
+
+</html>

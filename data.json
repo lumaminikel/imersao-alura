@@ -1,0 +1,29 @@
+{
+  "books": [
+    {
+      "image_url": "https://m.media-amazon.com/images/I/A1UjcPz4gZL._AC_UF1000,1000_QL80_.jpg",
+      "title": "O Ladrão de Raios",
+      "description": "Percy Jackson descobre que é um semideus e é acusado de roubar o raio-mestre de Zeus."
+    },
+    {
+      "image_url": "https://m.media-amazon.com/images/I/A1rVWjvjcdL._AC_UF1000,1000_QL80_.jpg",
+      "title": "O Mar de Monstros",
+      "description": "Percy e seus amigos partem em uma jornada pelo Mar de Monstros para encontrar o Velocino de Ouro."
+    },
+    {
+      "image_url": "https://m.media-amazon.com/images/I/A1v41nm-PKL._AC_UF1000,1000_QL80_.jpg",
+      "title": "A Maldição do Titã",
+      "description": "Percy se junta às Caçadoras de Ártemis para resgatar Annabeth e a deusa Ártemis."
+    },
+    {
+      "image_url": "https://m.media-amazon.com/images/I/A12XRUTsLbL._AC_UF1000,1000_QL80_.jpg",
+      "title": "A Batalha do Labirinto",
+      "description": "Percy e seus amigos entram no Labirinto de Dédalo para impedir a invasão do exército de Cronos."
+    },
+    {
+      "image_url": "https://m.media-amazon.com/images/I/A1DnSBI+WPL._AC_UF1000,1000_QL80_.jpg",
+      "title": "O Último Olimpiano",
+      "description": "A guerra entre os deuses e os titãs chega ao seu clímax, e Percy lidera a defesa do Monte Olimpo."
+    }
+  ]
+}
