@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Base de Conhecimento</title>
 </head>
 
 <body>
     <header>
-        <h1>Base de Conhecimento - Percy Jackson</h1>
+        <h1>Percy Jackson - ordem de leitura</h1>
         <div>
             <input type="text" placeholder="Busque por livros, personagens, etc.">
-            <button id="botao-busca" onclick="iniciarBusca">Buscar</button>
+            <button id="botao-busca">Buscar</button>
         </div>
     </header>
     <main>
+        <div class="loading-indicator">Carregando...</div>
         <section class="book-container">
         </section>
     </main>
+
+    <button id="back-to-top-btn" title="Voltar ao topo">&uarr;</button>
 
     <footer class="footer">
         <ul class="footer-links">
@@ -27,34 +31,20 @@
                 <a href="https://rickriordan.com/">Site do Autor</a>
             </li>
             <li>
-                <a href="https://disneybooks.disney.com/">Editora</a>
+                <a href="https://intrinseca.com.br/autor/rick-riordan">Editora</a>
             </li>
         </ul>
     </footer>
-    <script src="script.js">
-        document.addEventListener('DOMContentLoaded', () => {
-            const bookGrid = document.querySelector('.book-grid');
-
-            fetch('data.json')
-                .then(response => response.json())
-                .then(data => {
-                    data.books.forEach(book => {
-                        const bookCard = document.createElement('article');
-                        bookCard.classList.add('book-card');
-
-                        bookCard.innerHTML = `
-                            <img src="${book.image_url}" alt="${book.title}">
-                            <h2>${book.title}</h2>
-                            <p>${book.description}</p>
-                            <a href="#">Leia mais</a>
-                        `;
-
-                        bookGrid.appendChild(bookCard);
-                    });
-                })
-                .catch(error => console.error('Error loading book data:', error));
-        });
-    </script>
+    <div id="book-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-book-image" src="" alt="Capa do livro">
+            <div class="modal-book-text">
+                <h2 id="modal-book-title"></h2>
+                <div id="modal-book-synopsis"></div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

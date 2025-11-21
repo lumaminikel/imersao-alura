@@ -1,13 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
     const bookContainer = document.querySelector('.book-container');
-    const searchButton = document.getElementById('botao-busca');
     const searchInput = document.querySelector('input[type="text"]');
+    const loadingIndicator = document.querySelector('.loading-indicator');
+    const modal = document.getElementById('book-modal');
+    const closeModalButton = document.querySelector('.close-button');
+    const backToTopButton = document.getElementById('back-to-top-btn');
 
     let allSeries = [];
 
-    // Função para renderizar os livros na tela
-    function renderSeries(series) {
-        bookContainer.innerHTML = ''; // Limpa o container antes de adicionar novos dados
+    const showLoading = (isLoading) => {
+        loadingIndicator.style.display = isLoading ? 'block' : 'none';
+    };
+
+    const openModal = (book) => {
+        document.getElementById('modal-book-image').src = book.image_url;
+        document.getElementById('modal-book-title').textContent = book.title;
+        
+        const synopsisElement = document.getElementById('modal-book-synopsis');
+        if (book.sinopse) {
+            synopsisElement.innerHTML = book.sinopse.replace(/\n\n/g, '<br><br>');
+            synopsisElement.style.display = 'block';
+        } else {
+            synopsisElement.style.display = 'none';
+        }
+        
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    window.onscroll = () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    };
+
+    const renderSeries = (series) => {
+        bookContainer.innerHTML = '';
+        if (series.length === 0) {
+            bookContainer.innerHTML = '<p class="no-results">Nenhum resultado encontrado.</p>';
+            return;
+        }
         series.forEach(serie => {
             const seriesSection = document.createElement('section');
             seriesSection.classList.add('series-section');
@@ -23,35 +66,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 const bookCard = document.createElement('article');
                 bookCard.classList.add('book-card');
 
+                const shortDescription = book.description.length > 100 ? book.description.substring(0, 100) + '...' : book.description;
+
                 bookCard.innerHTML = `
                     <img src="${book.image_url}" alt="${book.title}">
                     <div class="book-card-content">
                         <h3>${book.title}</h3>
-                        <p>${book.description}</p>
-                        <a href="#">Leia mais</a>
+                        <p class="book-description">${shortDescription}</p>
+                        <a href="#" class="read-more">Saiba mais</a>
                     </div>
                 `;
+                bookCard.querySelector('.read-more').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openModal(book);
+                });
                 bookGrid.appendChild(bookCard);
             });
 
             seriesSection.appendChild(bookGrid);
             bookContainer.appendChild(seriesSection);
         });
-    }
+    };
 
-    // Carrega os dados dos livros do JSON
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            allSeries = data.series;
-            renderSeries(allSeries); // Renderiza todas as séries inicialmente
-        })
-        .catch(error => console.error('Error loading book data:', error));
-
-    // Função de busca
-    function search() {
-        const searchTerm = searchInput.value.toLowerCase();
-        if (searchTerm.trim() === '') {
+    const search = () => {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        if (searchTerm === '') {
             renderSeries(allSeries);
             return;
         }
@@ -59,19 +98,40 @@ document.addEventListener('DOMContentLoaded', () => {
         const filteredSeries = allSeries.map(series => {
             const filteredBooks = series.books.filter(book =>
                 book.title.toLowerCase().includes(searchTerm) ||
-                book.description.toLowerCase().includes(searchTerm)
+                book.description.toLowerCase().includes(searchTerm) ||
+                (book.sinopse && book.sinopse.toLowerCase().includes(searchTerm))
             );
             return { ...series, books: filteredBooks };
         }).filter(series => series.books.length > 0);
 
         renderSeries(filteredSeries);
-    }
+    };
 
-    // Adiciona o evento de clique ao botão de busca
-    searchButton.addEventListener('click', search);
-    searchInput.addEventListener('keyup', (event) => {
-        if (event.key === 'Enter') {
-            search();
+    showLoading(true);
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            allSeries = data.series;
+            renderSeries(allSeries);
+            showLoading(false);
+        })
+        .catch(error => {
+            console.error('Error loading book data:', error);
+            showLoading(false);
+            bookContainer.innerHTML = '<p class="error">Erro ao carregar os dados.</p>';
+        });
+
+    searchInput.addEventListener('input', search);
+    closeModalButton.addEventListener('click', closeModal);
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
         }
     });
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+    backToTopButton.addEventListener('click', scrollToTop);
 });

@@ -6,27 +6,32 @@
         {
           "image_url": "https://m.media-amazon.com/images/I/A1UjcPz4gZL._AC_UF1000,1000_QL80_.jpg",
           "title": "O Ladrão de Raios",
-          "description": "Percy Jackson descobre que é um semideus e é acusado de roubar o raio-mestre de Zeus."
+          "description": "Percy Jackson descobre que é um semideus e é acusado de roubar o raio-mestre de Zeus.",
+          "sinopse": "Percy Jackson, um garoto-problema, descobre ser um semideus e que as lendas da mitologia grega são reais. Acusado de roubar o raio de Zeus, ele precisa provar sua inocência, encontrar o verdadeiro ladrão e desvendar uma traição que ameaça a paz no Olimpo."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/A1rVWjvjcdL._AC_UF1000,1000_QL80_.jpg",
           "title": "O Mar de Monstros",
-          "description": "Percy e seus amigos partem em uma jornada pelo Mar de Monstros para encontrar o Velocino de Ouro."
+          "description": "Percy e seus amigos partem em uma jornada pelo Mar de Monstros para encontrar o Velocino de Ouro.",
+          "sinopse": "O Acampamento Meio-Sangue está em perigo. Percy e seus amigos embarcam em uma perigosa jornada pelo Mar de Monstros para encontrar o Velocino de Ouro, o único artefato mágico capaz de proteger o acampamento e salvar seus lares."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/A1v41nm-PKL._AC_UF1000,1000_QL80_.jpg",
           "title": "A Maldição do Titã",
-          "description": "Percy se junta às Caçadoras de Ártemis para resgatar Annabeth e a deusa Ártemis."
+          "description": "Percy se junta às Caçadoras de Ártemis para resgatar Annabeth e a deusa Ártemis.",
+          "sinopse": "Annabeth e a deusa Ártemis estão em perigo. Percy se une às Caçadoras de Ártemis em uma missão desesperada para resgatá-las, enfrentando perigos ancestrais e uma profecia que pode custar sua vida."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/A12XRUTsLbL._AC_UF1000,1000_QL80_.jpg",
           "title": "A Batalha do Labirinto",
-          "description": "Percy e seus amigos entram no Labirinto de Dédalo para impedir a invasão do exército de Cronos."
+          "description": "Percy e seus amigos entram no Labirinto de Dédalo para impedir a invasão do exército de Cronos.",
+          "sinopse": "O exército de Cronos ameaça invadir o Acampamento Meio-Sangue. Para detê-los, Percy e seus amigos devem entrar no traiçoeiro Labirinto de Dédalo, um lugar que enlouquece quem se atreve a explorá-lo."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/A1DnSBI+WPL._AC_UF1000,1000_QL80_.jpg",
           "title": "O Último Olimpiano",
-          "description": "A guerra entre os deuses e os titãs chega ao seu clímax, e Percy lidera a defesa do Monte Olimpo."
+          "description": "A guerra entre os deuses e os titãs chega ao seu clímax, e Percy lidera a defesa do Monte Olimpo.",
+          "sinopse": "A guerra entre deuses e titãs atinge seu ápice. Com os deuses ocupados, Percy Jackson lidera os semideuses na defesa do Monte Olimpo contra a fúria de Cronos, em uma batalha que decidirá o destino do mundo."
         }
       ]
     },
@@ -36,17 +41,20 @@
         {
           "image_url": "https://m.media-amazon.com/images/I/61NK-LyNk7L._SY425_.jpg",
           "title": "Os Arquivos do Semideus",
-          "description": "Contém histórias curtas que servem de ponte para a próxima série."
+          "description": "Contém histórias curtas que servem de ponte para a próxima série.",
+          "sinopse": "Mergulhe em aventuras inéditas com Percy, Annabeth e outros heróis. Este livro contém histórias curtas, entrevistas com os campistas e um mapa do Acampamento Meio-Sangue, servindo como ponte para a série Os Heróis do Olimpo."
         },
         {
           "image_url": "https://intrinseca.com.br/wp-content/uploads/2025/04/Capa_PercyGuiaDefinitivo_peq.jpg",
           "title": "O Guia Definitivo",
-          "description": "Livro informativo sobre o mundo de Percy Jackson."
+          "description": "Livro informativo sobre o mundo de Percy Jackson.",
+          "sinopse": "Um guia completo sobre o universo de Percy Jackson, com perfis de deuses e monstros, um bestiário e tudo o que você precisa saber para se tornar um especialista no mundo dos semideuses."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/61+2RRstscL._AC_UF1000,1000_QL80_.jpg",
           "title": "Percy Jackson e o Cálice dos Deuses",
-          "description": "Primeiro livro da nova trilogia sobre Percy."
+          "description": "Primeiro livro da nova trilogia sobre Percy.",
+          "sinopse": "Percy Jackson está de volta! Para conseguir as cartas de recomendação para a faculdade, ele precisa cumprir três missões para os deuses. A primeira: recuperar o Cálice dos Deuses antes que caia em mãos erradas."
         }
       ]
     },
@@ -56,27 +64,32 @@
         {
           "image_url": "https://m.media-amazon.com/images/I/81Rwm2q8mEL._UF1000,1000_QL80_.jpg",
           "title": "O Herói Perdido",
-          "description": "Jason, Piper e Leo são os novos heróis que devem resgatar Hera."
+          "description": "Jason, Piper e Leo são os novos heróis que devem resgatar Hera.",
+          "sinopse": "Jason acorda sem memória em um ônibus escolar, ao lado de Piper e Leo. Juntos, eles descobrem ser semideuses e que precisam resgatar a deusa Hera, sequestrada por uma força misteriosa."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/91O69rHdIJL._UF1000,1000_QL80_.jpg",
           "title": "O Filho de Netuno",
-          "description": "Percy, com amnésia, chega ao Acampamento Júpiter e se une a Hazel e Frank."
+          "description": "Percy, com amnésia, chega ao Acampamento Júpiter e se une a Hazel e Frank.",
+          "sinopse": "Percy Jackson, sofrendo de amnésia, encontra um acampamento de semideuses romanos. Ao lado de Hazel e Frank, ele embarca em uma missão no Alasca para libertar a Morte e deter um gigante."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/71EZBoLBULL.jpg",
           "title": "A Marca de Atena",
-          "description": "Os sete semideuses da profecia se reúnem para encontrar a Marca de Atena."
+          "description": "Os sete semideuses da profecia se reúnem para encontrar a Marca de Atena.",
+          "sinopse": "Os sete semideuses da Grande Profecia finalmente se reúnem a bordo do Argo II. Juntos, eles partem para Roma em busca da Marca de Atena, um artefato que pode unir ou destruir os acampamentos grego e romano."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/61D7SPJIzmL.jpg",
           "title": "A Casa de Hades",
-          "description": "Percy e Annabeth estão no Tártaro, enquanto os outros semideuses buscam as Portas da Morte."
+          "description": "Percy e Annabeth estão no Tártaro, enquanto os outros semideuses buscam as Portas da Morte.",
+          "sinopse": "Caídos no Tártaro, Percy e Annabeth lutam para sobreviver em um mundo de pesadelos. Enquanto isso, os outros cinco semideuses da profecia correm contra o tempo para encontrar as Portas da Morte e resgatá-los."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/81h37421KuL.jpg",
           "title": "O Sangue do Olimpo",
-          "description": "A batalha final contra Gaia e seus gigantes para salvar o mundo."
+          "description": "A batalha final contra Gaia e seus gigantes para salvar o mundo.",
+          "sinopse": "A Mãe Terra, Gaia, está prestes a despertar. Os sete semideuses precisam impedi-la a todo custo, enfrentando seu exército de gigantes em uma batalha épica na Grécia, o berço dos deuses, para salvar o mundo da destruição."
         }
       ]
     },
@@ -86,27 +99,32 @@
         {
           "image_url": "https://m.media-amazon.com/images/I/61AVbHlKENL.jpg",
           "title": "O Oráculo Oculto",
-          "description": "Apolo, transformado em um adolescente mortal, busca restaurar sua divindade."
+          "description": "Apolo, transformado em um adolescente mortal, busca restaurar sua divindade.",
+          "sinopse": "Zeus pune seu filho Apolo, transformando-o em um adolescente mortal e sem poderes. Agora, como Lester Papadopoulos, ele precisa aprender a sobreviver no mundo moderno e encontrar uma forma de reconquistar o favor de seu pai."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/61Zj31w4evL.jpg",
           "title": "A Profecia das Sombras",
-          "description": "Apolo continua sua jornada para restaurar os oráculos e enfrentar os imperadores romanos."
+          "description": "Apolo continua sua jornada para restaurar os oráculos e enfrentar os imperadores romanos.",
+          "sinopse": "A jornada de Apolo como mortal continua. Ele precisa restaurar os oráculos que caíram na escuridão e enfrentar o segundo imperador de um triunvirato maligno que deseja controlar o futuro."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/91TNtm1nNHL.jpg",
           "title": "O Labirinto de Fogo",
-          "description": "Apolo e seus amigos enfrentam o terceiro imperador e o Labirinto de Dédalo."
+          "description": "Apolo e seus amigos enfrentam o terceiro imperador e o Labirinto de Dédalo.",
+          "sinopse": "Apolo e seus companheiros precisam enfrentar o terceiro e mais temido imperador romano, além de sobreviverem ao Labirinto de Fogo. Uma jornada cheia de profecias, sacrifícios e o retorno de velhos amigos."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/61o0UB6J74L._AC_UF1000,1000_QL80_.jpg",
           "title": "A Tumba do Tirano",
-          "description": "Apolo viaja para o Acampamento Júpiter para enfrentar o quarto imperador."
+          "description": "Apolo viaja para o Acampamento Júpiter para enfrentar o quarto imperador.",
+          "sinopse": "Apolo viaja para o Acampamento Júpiter, o lar dos semideuses romanos, em busca de refúgio e ajuda. Lá, ele terá que enfrentar o quarto imperador e proteger o legado de Roma de uma tumba esquecida."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/61OhDqACvBL._AC_UF1000,1000_QL80_.jpg",
           "title": "A Torre de Nero",
-          "description": "Apolo enfrenta seu arqui-inimigo Nero em sua batalha final."
+          "description": "Apolo enfrenta seu arqui-inimigo Nero em sua batalha final.",
+          "sinopse": "Apolo retorna a Nova York para sua batalha final contra seu arqui-inimigo, o imperador Nero. Com a ajuda de seus amigos, ele precisa derrubar a Torre de Nero e impedir que o tirano domine o mundo."
         }
       ]
     },
@@ -116,17 +134,20 @@
         {
           "image_url": "https://m.media-amazon.com/images/I/61rxMph1PfL.jpg",
           "title": "A Pirâmide Vermelha",
-          "description": "Carter e Sadie Kane descobrem que são descendentes de faraós e deuses egípcios."
+          "description": "Carter e Sadie Kane descobrem que são descendentes de faraós e deuses egípcios.",
+          "sinopse": "Os irmãos Carter e Sadie Kane descobrem que os deuses do Egito Antigo estão despertando no mundo moderno. Eles são descendentes de faraós e precisam dominar seus poderes para deter o deus Set, que planeja destruir a América do Norte."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/71Vklf3QDsL.jpg",
           "title": "O Trono de Fogo",
-          "description": "Os irmãos Kane buscam o deus do sol, Rá, para deter o avanço do caos."
+          "description": "Os irmãos Kane buscam o deus do sol, Rá, para deter o avanço do caos.",
+          "sinopse": "Carter e Sadie embarcam em uma jornada perigosa para encontrar o deus do sol, Rá, e despertá-lo. Eles precisam da ajuda do deus para deter a serpente do caos, Apófis, que ameaça mergulhar o mundo na escuridão eterna."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/61uZdXUOADL._AC_UF1000,1000_QL80_.jpg",
           "title": "A Sombra da Serpente",
-          "description": "A batalha final dos Kane contra o deus do caos, Apófis."
+          "description": "A batalha final dos Kane contra o deus do caos, Apófis.",
+          "sinopse": "A serpente Apófis está livre e o fim do mundo se aproxima. Carter e Sadie Kane têm apenas alguns dias para encontrar um feitiço que possa destruí-la, mas isso pode custar a vida de seu hospedeiro, o deus Rá."
         }
       ]
     },
@@ -136,17 +157,20 @@
         {
           "image_url": "https://m.media-amazon.com/images/I/A15TDmyI6wL._UF1000,1000_QL80_.jpg",
           "title": "A Espada do Verão",
-          "description": "Magnus Chase descobre que é filho de um deus nórdico e morre heroicamente."
+          "description": "Magnus Chase descobre que é filho de um deus nórdico e morre heroicamente.",
+          "sinopse": "Magnus Chase, um garoto de rua, descobre ser filho de um deus nórdico. Após sua morte em um ato heroico, ele é levado para Valhala, o paraíso dos guerreiros, e descobre que precisa encontrar uma espada perdida para impedir o Ragnarok."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/71DHJpr22rL.jpg",
           "title": "O Martelo de Thor",
-          "description": "O martelo de Thor está desaparecido e Magnus precisa encontrá-lo."
+          "description": "O martelo de Thor está desaparecido e Magnus precisa encontrá-lo.",
+          "sinopse": "O martelo de Thor desapareceu novamente, e os inimigos de Asgard veem isso como uma oportunidade para atacar. Magnus e seus amigos precisam encontrar a arma antes que os gigantes invadam o mundo dos mortais."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/71uj+LqIYQL.jpg",
           "title": "O Navio dos Mortos",
-          "description": "Magnus e seus amigos partem para impedir o Ragnarok."
+          "description": "Magnus e seus amigos partem para impedir o Ragnarok.",
+          "sinopse": "Loki está livre e prepara Naglfar, o Navio dos Mortos, para navegar contra os deuses de Asgard e dar início ao Ragnarok. Magnus e seus amigos precisam impedi-lo em uma corrida contra o tempo pelos oceanos nórdicos."
         }
       ]
     },
@@ -156,17 +180,20 @@
         {
           "image_url": "https://m.media-amazon.com/images/I/91m8r04EXSL._UF1000,1000_QL80_.jpg",
           "title": "O Filho de Sobek",
-          "description": "Percy Jackson e Carter Kane se encontram e lutam contra um crocodilo gigante."
+          "description": "Percy Jackson e Carter Kane se encontram e lutam contra um crocodilo gigante.",
+          "sinopse": "Percy Jackson e Carter Kane se encontram em Long Island e precisam unir forças para lutar contra um crocodilo gigante que aterroriza a região. Um crossover entre as mitologias grega e egípcia."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/911WJu2ppBL._UF1000,1000_QL80_.jpg",
           "title": "O Cajado de Serape",
-          "description": "Annabeth Chase e Sadie Kane se unem para derrotar um deus renegado."
+          "description": "Annabeth Chase e Sadie Kane se unem para derrotar um deus renegado.",
+          "sinopse": "Annabeth Chase e Sadie Kane se encontram em Nova York e se unem para derrotar Serape, um deus renegado que ameaça o mundo com seus poderes de duas mitologias."
         },
         {
           "image_url": "https://m.media-amazon.com/images/I/9178ORQBpzL._UF1000,1000_QL80_.jpg",
           "title": "A Coroa de Ptolomeu",
-          "description": "Percy, Annabeth, Carter e Sadie se unem para deter um mago maligno."
+          "description": "Percy, Annabeth, Carter e Sadie se unem para deter um mago maligno.",
+          "sinopse": "Percy, Annabeth, Carter e Sadie se unem para enfrentar Setne, um mago maligno que planeja se tornar um deus. A união definitiva dos universos grego e egípcio para salvar o mundo."
         }
       ]
     },
@@ -176,7 +203,8 @@
         {
           "image_url": "https://m.media-amazon.com/images/I/61VKYk9y4dL.jpg",
           "title": "Sol e Estrela",
-          "description": "Uma aventura de Nico di Angelo e Will Solace no Tártaro."
+          "description": "Uma aventura de Nico di Angelo e Will Solace no Tártaro.",
+          "sinopse": "Nico di Angelo e Will Solace embarcam em uma perigosa missão no Tártaro para resgatar um amigo. Uma jornada sombria e emocionante que testará os limites de seu relacionamento e seus poderes."
         }
       ]
     }

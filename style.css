@@ -1,102 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Importa a fonte Quicksand do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 * {
-    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+    box-sizing: border-box;
 }
 
 :root {
-    --primary-color: #D9C589; /* Cor primária (azul claro) */
-    --secondary-color: #F2F2F2; /* Cor secundária (cinza claro) */
-    --tertiary-color: #BF9765; /* Cor terciária (cinza médio) */
-    --bg-color: #1A261E; /* Cor de fundo (cinza escuro) */
+    --primary-color: #D9C589;
+    --secondary-color: #F2F2F2;
+    --tertiary-color: #BF9765;
+    --bg-color: #0f1d31;
+    --accent-color: #a18e72;
 }
 
 body {
-    margin: 0; /* Remove a margem padrão do body */
-    background: var(--bg-color); /* Define a cor de fundo usando uma variável */
-    color: var(--secondary-color); /* Define a cor do texto padrão usando uma variável */
-    font-family: "Quicksand", sans-serif; /* Define a família da fonte */
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--secondary-color);
+    font-family: "Quicksand", sans-serif;
 }
 
 header {
-    padding: 2rem 1rem; /* Espaçamento interno (2rem em cima/baixo, 1rem nos lados) */
-    display: flex; /* Habilita o layout flexbox */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    justify-content: space-around; /* Distribui os itens com espaço ao redor */
-    position: sticky; /* Mantém o cabeçalho fixo no topo ao rolar a página */
-    top: 0; /* Posição do topo quando sticky */
-    background: var(--bg-color); /* Cor de fundo do cabeçalho */
-    z-index: 10; /* Define a ordem de empilhamento para ficar sobre outros elementos */
-    border-bottom: 1px solid var(--bg-color); /* Adiciona uma borda inferior */
-    gap: 1rem; /* Espaçamento entre os elementos flex */
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    background: var(--bg-color);
+    z-index: 10;
+    border-bottom: 1px solid var(--bg-color);
+    gap: 1rem;
 }
 
 header h1 {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    margin: 0; /* Remove a margem padrão */
-    font-weight: 500; /* Peso da fonte (médio) */
-    white-space: nowrap; /* Impede a quebra de linha do texto */
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 500;
+    white-space: nowrap;
 }
 
 div input {
-    padding: 0.375rem 0.75rem; /* Espaçamento interno */
-    border-radius: 1rem; /* Arredonda as bordas */
-    border: 1px solid var(--tertiary-color); /* Define a borda */
-    background: var(--bg-color); /* Cor de fundo */
-    font-family: inherit; /* Herda a família da fonte do elemento pai */
-    font-size: 1.5rem; /* Tamanho da fonte */
-    transition: all 0.2s ease; /* Adiciona uma transição suave para todas as propriedades */
-    width: 30rem; /* Largura do input */
-    color: var(--secondary-color); /* Cor do texto digitado */
-    margin-right: .5rem; /* Margem à direita */
+    padding: 0.375rem 0.75rem;
+    border-radius: 1rem;
+    border: 1px solid var(--tertiary-color);
+    background: var(--bg-color);
+    font-family: inherit;
+    font-size: 1.5rem;
+    transition: all 0.2s ease;
+    width: 30rem;
+    color: var(--secondary-color);
+    margin-right: .5rem;
 }
 
 div input::placeholder {
-    font-size: 1.2rem; /* Tamanho da fonte do placeholder */
-    font-weight: 300; /* Peso da fonte do placeholder */
-    color: var(--tertiary-color); /* Cor do texto do placeholder */
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--tertiary-color);
 }
 
 div input:focus {
-    outline: none; /* Remove a borda de foco padrão */
-    border-color: var(--bg-color); /* Muda a cor da borda ao focar */
-    box-shadow: 0 0 0 0.1rem var(--tertiary-color); /* Adiciona uma sombra de caixa para indicar foco */
+    outline: none;
+    border-color: var(--bg-color);
+    box-shadow: 0 0 0 0.1rem var(--tertiary-color);
+    transition: box-shadow 0.2s ease;
 }
 
 #botao-busca {
-    padding: 1rem 2rem; /* Espaçamento interno */
-    border-radius: 1rem; /* Arredonda as bordas */
-    border: none; /* Remove a borda padrão */
-    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
-    font-family: inherit; /* Herda a família da fonte */
-    font-weight: 500; /* Peso da fonte */
-    font-size: 1rem; /* Tamanho da fonte */
-    white-space: nowrap; /* Impede a quebra de linha do texto */
-    transition: background-color 0.2s ease, color 0.2s ease; /* Transição suave para cor de fundo e cor do texto */
-    background-color: var(--primary-color); /* Cor de fundo */
-    color: var(--bg-color); /* Cor do texto */
-    border: 1px solid var(--bg-color); /* Adiciona uma borda */
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: 1px solid var(--bg-color);
 }
 
 #botao-busca:hover {
-    background-color: var(--primary-color); /* Muda a cor de fundo ao passar o mouse */
-    color: var(--bg-color); /* Muda a cor do texto ao passar o mouse */
-    box-shadow: 0 0 0 0.1rem var(--primary-color); /* Adiciona uma sombra de caixa */
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 0 0.1rem var(--primary-color);
 }
 
 #botao-busca:active {
-    transform: scale(0.98); /* Efeito de clique (diminui o tamanho) */
+    transform: scale(0.98);
 }
 
 main {
-    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura */
-    max-width: 80rem; /* Largura máxima do conteúdo principal */
-    margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente */
-    margin-top: 2rem; /* Margem no topo */
-    height: auto; /* Calcula a altura para preencher o espaço restante da tela */
+    overflow-y: auto;
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    height: auto;
 }
-
-
 
 .book-container {
     padding: 1rem;
@@ -157,14 +157,6 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.book-card-content p {
-    margin: 0.5rem 0;
-    line-height: 1.4;
-    font-size: 0.9rem;
-    color: var(--secondary-color);
-    flex-grow: 1;
-}
-
 .book-card-content a {
     color: var(--primary-color);
     text-decoration: none;
@@ -176,89 +168,228 @@ main {
     text-decoration: underline;
 }
 
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#back-to-top-btn:hover {
+    background-color: var(--tertiary-color);
+    transform: scale(1.1);
+}
+
 .footer {
     position: relative;
     margin-top: 2rem;
 }
 
-
-.footer-location {
-    color: #9aa0a6; /* Cor do texto */
-    margin-bottom: 10px; /* Margem inferior */
-}
-
 .footer-links {
-    list-style: none; /* Remove os marcadores da lista */
-    display: flex; /* Habilita o layout flexbox */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 15px; /* Espaçamento entre os links */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .footer-links a {
-    color: var(--secondary-color); /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado */
-    transition: color 0.2s; /* Transição suave para a cor */
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
 .footer-links a:hover {
-    color: var(--accent-color); /* Muda a cor do link ao passar o mouse (variável não definida) */
+    color: var(--accent-color);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: var(--bg-color);
+    margin: 5% auto;
+    padding: 2rem;
+    border: 1px solid var(--tertiary-color);
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.close-button {
+    color: var(--secondary-color);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--primary-color);
+}
+
+#modal-book-image {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.modal-book-text {
+    flex: 1;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.modal-book-text::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-book-text::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.modal-book-text::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.modal-book-text::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#modal-book-title {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+#modal-book-synopsis {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    color: var(--secondary-color);
+}
+
+.loading-indicator {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.no-results, .error {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: var(--tertiary-color);
 }
 
 @media (max-width: 768px) {
-    header { /* Estilos para telas com largura máxima de 768px */
-        flex-direction: column; /* Organiza os itens do cabeçalho em coluna */
-        padding: 1rem; /* Reduz o espaçamento interno */
+    header {
+        flex-direction: column;
+        padding: 1rem;
     }
 
-    header h1 { /* Estilos para o h1 no cabeçalho em telas menores */
-        text-align: center; /* Centraliza o texto */
-        margin-bottom: 1rem; /* Adiciona margem inferior */
+    header h1 {
+        text-align: center;
+        margin-bottom: 1rem;
     }
 
-    div input { /* Estilos para o input em telas menores */
-        width: 90vw; /* Largura baseada na largura da viewport */
-        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    div input {
+        width: 90vw;
+        font-size: 1.2rem;
     }
 
-    main { /* Estilos para o main em telas menores */
-        padding: 0 1rem; /* Adiciona espaçamento lateral */
+    main {
+        padding: 0 1rem;
     }
 
-    article:hover { /* Estilos para o article em telas menores */
-        transform: none; /* Remove o efeito de escala ao passar o mouse */
+    article:hover {
+        transform: none;
+    }
+
+    .modal-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    #modal-book-image {
+        width: 60%;
+        max-width: 200px;
+    }
+
+    #modal-book-title,
+    #modal-book-description,
+    #modal-book-synopsis {
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
-    header h1 { /* Estilos para o h1 em telas com largura máxima de 480px */
-        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte */
-        max-width: 70%; /* Define uma largura máxima */
-        word-wrap: break-word; /* Permite a quebra de palavras longas */
+    header h1 {
+        font-size: 1rem;
+        max-width: 70%;
+        word-wrap: break-word;
     }
 
-    div input, /* Estilos para o input e seu placeholder em telas muito pequenas */
+    div input,
     div input::placeholder {
-        font-size: 1rem; /* Reduz o tamanho da fonte */
+        font-size: 1rem;
     }
 
-    article h2 { /* Estilos para o h2 do article em telas muito pequenas */
-        font-size: 1.3rem; /* Reduz o tamanho da fonte */
+    article h2 {
+        font-size: 1.3rem;
     }
 
-    div { /* Estilos para a div do cabeçalho em telas muito pequenas */
-        display: flex; /* Habilita flexbox */
-        align-items: center; /* Alinha itens ao centro */
-        justify-content: center; /* Centraliza itens */
-        flex-direction: column; /* Organiza em coluna */
-        gap: 0.5rem; /* Espaçamento entre os itens */
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
-    .footer { /* Estilos para o rodapé em telas muito pequenas */
-        display: none; /* Oculta o rodapé */
+    .footer {
+        display: none;
     }
 
-    button { /* Estilos para o botão em telas muito pequenas */
-        margin-top: 1rem; /* Adiciona margem no topo */
+    button {
+        margin-top: 1rem;
     }
 }
