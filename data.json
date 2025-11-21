@@ -1,29 +1,184 @@
 {
-  "books": [
+  "series": [
     {
-      "image_url": "https://m.media-amazon.com/images/I/A1UjcPz4gZL._AC_UF1000,1000_QL80_.jpg",
-      "title": "O Ladrão de Raios",
-      "description": "Percy Jackson descobre que é um semideus e é acusado de roubar o raio-mestre de Zeus."
+      "title": "Percy Jackson e os Olimpianos",
+      "books": [
+        {
+          "image_url": "https://m.media-amazon.com/images/I/A1UjcPz4gZL._AC_UF1000,1000_QL80_.jpg",
+          "title": "O Ladrão de Raios",
+          "description": "Percy Jackson descobre que é um semideus e é acusado de roubar o raio-mestre de Zeus."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/A1rVWjvjcdL._AC_UF1000,1000_QL80_.jpg",
+          "title": "O Mar de Monstros",
+          "description": "Percy e seus amigos partem em uma jornada pelo Mar de Monstros para encontrar o Velocino de Ouro."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/A1v41nm-PKL._AC_UF1000,1000_QL80_.jpg",
+          "title": "A Maldição do Titã",
+          "description": "Percy se junta às Caçadoras de Ártemis para resgatar Annabeth e a deusa Ártemis."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/A12XRUTsLbL._AC_UF1000,1000_QL80_.jpg",
+          "title": "A Batalha do Labirinto",
+          "description": "Percy e seus amigos entram no Labirinto de Dédalo para impedir a invasão do exército de Cronos."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/A1DnSBI+WPL._AC_UF1000,1000_QL80_.jpg",
+          "title": "O Último Olimpiano",
+          "description": "A guerra entre os deuses e os titãs chega ao seu clímax, e Percy lidera a defesa do Monte Olimpo."
+        }
+      ]
     },
     {
-      "image_url": "https://m.media-amazon.com/images/I/A1rVWjvjcdL._AC_UF1000,1000_QL80_.jpg",
-      "title": "O Mar de Monstros",
-      "description": "Percy e seus amigos partem em uma jornada pelo Mar de Monstros para encontrar o Velocino de Ouro."
+      "title": "Livros Extras de Percy Jackson e os Olimpianos",
+      "books": [
+        {
+          "image_url": "https://m.media-amazon.com/images/I/61NK-LyNk7L._SY425_.jpg",
+          "title": "Os Arquivos do Semideus",
+          "description": "Contém histórias curtas que servem de ponte para a próxima série."
+        },
+        {
+          "image_url": "https://intrinseca.com.br/wp-content/uploads/2025/04/Capa_PercyGuiaDefinitivo_peq.jpg",
+          "title": "O Guia Definitivo",
+          "description": "Livro informativo sobre o mundo de Percy Jackson."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/61+2RRstscL._AC_UF1000,1000_QL80_.jpg",
+          "title": "Percy Jackson e o Cálice dos Deuses",
+          "description": "Primeiro livro da nova trilogia sobre Percy."
+        }
+      ]
     },
     {
-      "image_url": "https://m.media-amazon.com/images/I/A1v41nm-PKL._AC_UF1000,1000_QL80_.jpg",
-      "title": "A Maldição do Titã",
-      "description": "Percy se junta às Caçadoras de Ártemis para resgatar Annabeth e a deusa Ártemis."
+      "title": "Os Heróis do Olimpo",
+      "books": [
+        {
+          "image_url": "https://m.media-amazon.com/images/I/81Rwm2q8mEL._UF1000,1000_QL80_.jpg",
+          "title": "O Herói Perdido",
+          "description": "Jason, Piper e Leo são os novos heróis que devem resgatar Hera."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/91O69rHdIJL._UF1000,1000_QL80_.jpg",
+          "title": "O Filho de Netuno",
+          "description": "Percy, com amnésia, chega ao Acampamento Júpiter e se une a Hazel e Frank."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/71EZBoLBULL.jpg",
+          "title": "A Marca de Atena",
+          "description": "Os sete semideuses da profecia se reúnem para encontrar a Marca de Atena."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/61D7SPJIzmL.jpg",
+          "title": "A Casa de Hades",
+          "description": "Percy e Annabeth estão no Tártaro, enquanto os outros semideuses buscam as Portas da Morte."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/81h37421KuL.jpg",
+          "title": "O Sangue do Olimpo",
+          "description": "A batalha final contra Gaia e seus gigantes para salvar o mundo."
+        }
+      ]
     },
     {
-      "image_url": "https://m.media-amazon.com/images/I/A12XRUTsLbL._AC_UF1000,1000_QL80_.jpg",
-      "title": "A Batalha do Labirinto",
-      "description": "Percy e seus amigos entram no Labirinto de Dédalo para impedir a invasão do exército de Cronos."
+      "title": "As Provações de Apolo",
+      "books": [
+        {
+          "image_url": "https://m.media-amazon.com/images/I/61AVbHlKENL.jpg",
+          "title": "O Oráculo Oculto",
+          "description": "Apolo, transformado em um adolescente mortal, busca restaurar sua divindade."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/61Zj31w4evL.jpg",
+          "title": "A Profecia das Sombras",
+          "description": "Apolo continua sua jornada para restaurar os oráculos e enfrentar os imperadores romanos."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/91TNtm1nNHL.jpg",
+          "title": "O Labirinto de Fogo",
+          "description": "Apolo e seus amigos enfrentam o terceiro imperador e o Labirinto de Dédalo."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/61o0UB6J74L._AC_UF1000,1000_QL80_.jpg",
+          "title": "A Tumba do Tirano",
+          "description": "Apolo viaja para o Acampamento Júpiter para enfrentar o quarto imperador."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/61OhDqACvBL._AC_UF1000,1000_QL80_.jpg",
+          "title": "A Torre de Nero",
+          "description": "Apolo enfrenta seu arqui-inimigo Nero em sua batalha final."
+        }
+      ]
     },
     {
-      "image_url": "https://m.media-amazon.com/images/I/A1DnSBI+WPL._AC_UF1000,1000_QL80_.jpg",
-      "title": "O Último Olimpiano",
-      "description": "A guerra entre os deuses e os titãs chega ao seu clímax, e Percy lidera a defesa do Monte Olimpo."
+      "title": "As Crônicas dos Kane",
+      "books": [
+        {
+          "image_url": "https://m.media-amazon.com/images/I/61rxMph1PfL.jpg",
+          "title": "A Pirâmide Vermelha",
+          "description": "Carter e Sadie Kane descobrem que são descendentes de faraós e deuses egípcios."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/71Vklf3QDsL.jpg",
+          "title": "O Trono de Fogo",
+          "description": "Os irmãos Kane buscam o deus do sol, Rá, para deter o avanço do caos."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/61uZdXUOADL._AC_UF1000,1000_QL80_.jpg",
+          "title": "A Sombra da Serpente",
+          "description": "A batalha final dos Kane contra o deus do caos, Apófis."
+        }
+      ]
+    },
+    {
+      "title": "Magnus Chase e os Deuses de Asgard",
+      "books": [
+        {
+          "image_url": "https://m.media-amazon.com/images/I/A15TDmyI6wL._UF1000,1000_QL80_.jpg",
+          "title": "A Espada do Verão",
+          "description": "Magnus Chase descobre que é filho de um deus nórdico e morre heroicamente."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/71DHJpr22rL.jpg",
+          "title": "O Martelo de Thor",
+          "description": "O martelo de Thor está desaparecido e Magnus precisa encontrá-lo."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/71uj+LqIYQL.jpg",
+          "title": "O Navio dos Mortos",
+          "description": "Magnus e seus amigos partem para impedir o Ragnarok."
+        }
+      ]
+    },
+    {
+      "title": "Semideuses e Magos",
+      "books": [
+        {
+          "image_url": "https://m.media-amazon.com/images/I/91m8r04EXSL._UF1000,1000_QL80_.jpg",
+          "title": "O Filho de Sobek",
+          "description": "Percy Jackson e Carter Kane se encontram e lutam contra um crocodilo gigante."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/911WJu2ppBL._UF1000,1000_QL80_.jpg",
+          "title": "O Cajado de Serape",
+          "description": "Annabeth Chase e Sadie Kane se unem para derrotar um deus renegado."
+        },
+        {
+          "image_url": "https://m.media-amazon.com/images/I/9178ORQBpzL._UF1000,1000_QL80_.jpg",
+          "title": "A Coroa de Ptolomeu",
+          "description": "Percy, Annabeth, Carter e Sadie se unem para deter um mago maligno."
+        }
+      ]
+    },
+    {
+      "title": "Livros Complementares",
+      "books": [
+        {
+          "image_url": "https://m.media-amazon.com/images/I/61VKYk9y4dL.jpg",
+          "title": "Sol e Estrela",
+          "description": "Uma aventura de Nico di Angelo e Will Solace no Tártaro."
+        }
+      ]
     }
   ]
 }
