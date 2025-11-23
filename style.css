@@ -298,6 +298,25 @@ main > h1 {
   ); /* Muda a cor do texto do link ao passar o mouse. */
 }
 
+.footer-credit {
+  /* Agora como um item de lista, ele se alinha com os outros. */
+  width: 100%; /* Ocupa toda a largura para centralizar o texto abaixo dos links. */
+  text-align: center; /* Centraliza o texto. */
+  margin-top: 1rem; /* Adiciona um espaço sutil acima. */
+  font-size: 0.9rem; /* Define o tamanho da fonte. */
+  color: var(--accent-color); /* Usa a cor de destaque para o texto. */
+}
+
+.footer-credit a {
+  color: inherit; /* Herda a cor do texto do elemento pai (.footer-credit). */
+  text-decoration: underline; /* Adiciona um sublinhado para deixar claro que é um link. */
+  transition: color 0.2s ease; /* Adiciona uma transição suave para a mudança de cor. */
+}
+
+.footer-credit a:hover {
+  color: var(--primary-color); /* Muda a cor do link ao passar o mouse para dar feedback. */
+}
+
 .modal {
   display: none; /* Oculta o modal por padrão. */
   position: fixed; /* Fixa o modal na tela. */
