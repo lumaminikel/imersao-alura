@@ -82,14 +82,9 @@ header {
   border-bottom: 1px solid var(--bg-color); /* Adiciona uma borda inferior sutil. */
   gap: 1rem; /* Adiciona um espaçamento entre os elementos filhos do cabeçalho. */
 }
-
-header h1 {
-  font-size: 1.5rem; /* Define o tamanho da fonte do título principal. */
-  margin: 0; /* Remove a margem padrão do h1. */
-  font-weight: 500; /* Define o peso da fonte (médio). */
-  white-space: nowrap; /* Impede que o texto do título quebre em várias linhas. */
-}
-
+ 
+/* O search-container não precisa mais de estilos específicos de flexbox aqui */
+ 
 div input {
   padding: 0.375rem 0.75rem; /* Adiciona preenchimento interno ao campo de busca. */
   border-radius: 1rem; /* Arredonda as bordas do campo de busca. */
@@ -159,6 +154,15 @@ main {
   max-width: 80rem; /* Define a largura máxima do conteúdo principal. */
   margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente. */
   height: auto; /* Permite que a altura se ajuste ao conteúdo. */
+}
+
+main > h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 
 .book-container {
@@ -474,7 +478,7 @@ main {
   .main-content {
     margin-left: 0; /* Remove a margem quando o menu está escondido */
     margin-right: 0; /* Remove a margem direita em telas menores */
-    padding-top: 1rem; /* Reduz o padding para um valor mínimo */
+    padding-top: 130px; /* Garante espaço para o header que agora é estático */
   }
 
   .series-section {
@@ -485,7 +489,7 @@ main {
   header {
     flex-direction: column; /* Empilha os itens do cabeçalho verticalmente. */
     position: static; /* Remove o posicionamento fixo/relativo */
-    padding: 1rem; /* Reduz o preenchimento do cabeçalho. */
+    padding: 1rem; /* Reduz o preenchimento do cabeçalho. */ 
   }
 
   .search-container {
@@ -494,11 +498,6 @@ main {
     align-items: center;
     gap: 1rem; /* Adiciona espaço entre o input e o botão */
     width: 100%;
-  }
-
-  header h1 {
-    text-align: center; /* Centraliza o título. */
-    margin-bottom: 1rem; /* Adiciona margem abaixo do título. */
   }
 
   div input {
@@ -534,12 +533,6 @@ main {
 
 /* Media Query para telas muito pequenas (celulares) */
 @media (max-width: 480px) {
-  header h1 {
-    font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do título. */
-    max-width: 70%; /* Limita a largura do título. */
-    word-wrap: break-word; /* Permite que o título quebre em várias linhas se for muito longo. */
-  }
-
   div input,
   div input::placeholder {
     font-size: 1rem; /* Reduz o tamanho da fonte do campo de busca e do placeholder. */
