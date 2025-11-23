@@ -2,7 +2,7 @@
 
 Uma interface web interativa e responsiva para explorar os livros do universo literário de Rick Riordan. Este projeto foi desenvolvido como parte da **Imersão Dev com Google Gemini (10ª Edição)**, promovida pela Alura.
 
-![Prévia do Projeto](/assets/Base%20Percy.png) 
+![Prévia do Projeto](/assets/Base_Percy.png) 
 
 ## 📖 Sobre o Projeto
 
