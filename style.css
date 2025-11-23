@@ -1,395 +1,400 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Importa a fonte 'Quicksand' do Google Fonts para ser usada na página. */
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Define o modelo de caixa para todos os elementos, onde padding e border são incluídos na largura e altura totais. */
 }
 
 :root {
-    --primary-color: #D9C589;
-    --secondary-color: #F2F2F2;
-    --tertiary-color: #BF9765;
-    --bg-color: #0f1d31;
-    --accent-color: #a18e72;
+    --primary-color: #D9C589; /* Define a cor primária (dourado/amarelo) como uma variável CSS. */
+    --secondary-color: #F2F2F2; /* Define a cor secundária (branco) para textos. */
+    --tertiary-color: #BF9765; /* Define a cor terciária (dourado mais escuro) para detalhes. */
+    --bg-color: #071220; /* Define a cor de fundo principal (azul escuro). */
+    --accent-color: #a18e72; /* Define uma cor de destaque (marrom claro). */
+    --header-footer-bg: #101C2C; /* Define a cor de fundo para o cabeçalho e rodapé. */
 }
 
 body {
-    margin: 0;
-    background: var(--bg-color);
-    color: var(--secondary-color);
-    font-family: "Quicksand", sans-serif;
+    margin: 0; /* Remove a margem padrão do corpo da página. */
+    background-color: var(--bg-color); /* Aplica a cor de fundo principal definida na variável. */
+    color: var(--secondary-color); /* Define a cor padrão do texto. */
+    font-family: "Quicksand", sans-serif; /* Define a família de fontes para todo o corpo da página. */
 }
 
 header {
-    padding: 2rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: sticky;
-    top: 0;
-    background: var(--bg-color);
-    z-index: 10;
-    border-bottom: 1px solid var(--bg-color);
-    gap: 1rem;
+    padding: 2rem 1rem; /* Adiciona preenchimento interno (2rem em cima/baixo, 1rem nas laterais). */
+    display: flex; /* Usa o modelo de layout flexbox para alinhar os itens. */
+    align-items: center; /* Centraliza os itens verticalmente. */
+    justify-content: space-around; /* Distribui os itens com espaço igual ao redor deles. */
+    position: sticky; /* Faz o cabeçalho "grudar" no topo da tela ao rolar. */
+    top: 0; /* Define a posição do cabeçalho fixo no topo. */
+    background: var(--header-footer-bg); /* Define a cor de fundo do cabeçalho. */
+    z-index: 10; /* Garante que o cabeçalho fique acima de outros elementos. */
+    border-bottom: 1px solid var(--bg-color); /* Adiciona uma borda inferior sutil. */
+    gap: 1rem; /* Adiciona um espaçamento entre os elementos filhos do cabeçalho. */
 }
 
 header h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    font-weight: 500;
-    white-space: nowrap;
+    font-size: 1.5rem; /* Define o tamanho da fonte do título principal. */
+    margin: 0; /* Remove a margem padrão do h1. */
+    font-weight: 500; /* Define o peso da fonte (médio). */
+    white-space: nowrap; /* Impede que o texto do título quebre em várias linhas. */
 }
 
 div input {
-    padding: 0.375rem 0.75rem;
-    border-radius: 1rem;
-    border: 1px solid var(--tertiary-color);
-    background: var(--bg-color);
-    font-family: inherit;
-    font-size: 1.5rem;
-    transition: all 0.2s ease;
-    width: 30rem;
-    color: var(--secondary-color);
-    margin-right: .5rem;
+    padding: 0.375rem 0.75rem; /* Adiciona preenchimento interno ao campo de busca. */
+    border-radius: 1rem; /* Arredonda as bordas do campo de busca. */
+    border: 1px solid var(--tertiary-color); /* Define a cor e espessura da borda. */
+    background: var(--bg-color); /* Define a cor de fundo do campo. */
+    font-family: inherit; /* Herda a fonte do elemento pai. */
+    font-size: 1.5rem; /* Define o tamanho da fonte do texto digitado. */
+    transition: all 0.2s ease; /* Adiciona uma transição suave para todas as propriedades. */
+    width: 30rem; /* Define a largura do campo de busca. */
+    color: var(--secondary-color); /* Define a cor do texto digitado. */
+    margin-right: .5rem; /* Adiciona uma margem à direita. */
 }
 
 div input::placeholder {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: var(--tertiary-color);
+    font-size: 1.2rem; /* Define o tamanho da fonte do texto de placeholder. */
+    font-weight: 300; /* Define o peso da fonte do placeholder (leve). */
+    color: var(--tertiary-color); /* Define a cor do texto do placeholder. */
 }
 
 div input:focus {
-    outline: none;
-    border-color: var(--bg-color);
-    box-shadow: 0 0 0 0.1rem var(--tertiary-color);
-    transition: box-shadow 0.2s ease;
+    outline: none; /* Remove a borda de foco padrão do navegador. */
+    border-color: var(--bg-color); /* Muda a cor da borda quando o campo está em foco. */
+    box-shadow: 0 0 0 0.1rem var(--tertiary-color); /* Adiciona um brilho sutil ao redor do campo em foco. */
+    transition: box-shadow 0.2s ease; /* Anima a aparição do brilho. */
 }
 
 #botao-busca {
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 1rem;
-    white-space: nowrap;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-    border: 1px solid var(--bg-color);
+    padding: 1rem 2rem; /* Adiciona preenchimento interno ao botão. */
+    border-radius: 1rem; /* Arredonda as bordas do botão. */
+    border: none; /* Remove a borda padrão do botão. */
+    cursor: pointer; /* Muda o cursor para uma "mãozinha" ao passar sobre o botão. */
+    font-family: inherit; /* Herda a fonte do elemento pai. */
+    font-weight: 500; /* Define o peso da fonte do texto do botão. */
+    font-size: 1rem; /* Define o tamanho da fonte do texto do botão. */
+    white-space: nowrap; /* Impede que o texto do botão quebre em várias linhas. */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Adiciona transições suaves para cor de fundo e cor do texto. */
+    background-color: var(--primary-color); /* Define a cor de fundo do botão. */
+    color: var(--bg-color); /* Define a cor do texto do botão. */
+    border: 1px solid var(--bg-color); /* Adiciona uma borda sutil. */
 }
 
 #botao-busca:hover {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-    box-shadow: 0 0 0 0.1rem var(--primary-color);
+    background-color: var(--primary-color); /* Mantém a cor de fundo ao passar o mouse. */
+    color: var(--bg-color); /* Mantém a cor do texto ao passar o mouse. */
+    box-shadow: 0 0 0 0.1rem var(--primary-color); /* Adiciona um brilho ao redor do botão no hover. */
 }
 
 #botao-busca:active {
-    transform: scale(0.98);
+    transform: scale(0.98); /* Cria um efeito de clique diminuindo levemente o tamanho do botão. */
 }
 
 main {
-    overflow-y: auto;
-    max-width: 80rem;
-    margin: 0 auto;
-    margin-top: 2rem;
-    height: auto;
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura. */
+    max-width: 80rem; /* Define a largura máxima do conteúdo principal. */
+    margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente. */
+    margin-top: 2rem; /* Adiciona uma margem no topo. */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo. */
 }
 
 .book-container {
-    padding: 1rem;
+    padding: 1rem; /* Adiciona preenchimento ao contêiner dos livros. */
 }
 
 .series-section {
-    margin-bottom: 3rem;
+    margin-bottom: 3rem; /* Adiciona uma margem na parte inferior de cada seção de série. */
 }
 
 .series-section h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem; /* Define o tamanho da fonte para os títulos das séries. */
+    color: var(--primary-color); /* Define a cor do texto dos títulos das séries. */
+    border-bottom: 2px solid var(--primary-color); /* Adiciona uma linha de borda abaixo do título. */
+    padding-bottom: 0.5rem; /* Adiciona um espaçamento entre o texto e a borda inferior. */
+    margin-bottom: 1.5rem; /* Adiciona uma margem abaixo do título. */
 }
 
 .book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 1.5rem;
+    display: grid; /* Usa o modelo de layout de grade. */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Cria colunas responsivas: elas terão no mínimo 180px e se ajustarão para preencher o espaço. */
+    gap: 1.5rem; /* Adiciona um espaçamento entre os cards de livros. */
 }
 
 .book-card {
-    background: #2d2e30;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
+    background: #2d2e30; /* Define a cor de fundo dos cards de livro. */
+    border-radius: 8px; /* Arredonda as bordas dos cards. */
+    overflow: hidden; /* Garante que o conteúdo que sair dos limites do card (como a imagem) seja cortado. */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adiciona uma sombra sutil ao card. */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Adiciona transições suaves para o efeito de hover. */
+    display: flex; /* Usa flexbox para o layout interno do card. */
+    flex-direction: column; /* Organiza os itens internos em uma coluna. */
 }
 
 .book-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transform: translateY(-5px); /* Move o card 5px para cima ao passar o mouse. */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Aumenta a sombra para dar um efeito de profundidade. */
 }
 
 .book-card img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 2 / 3;
-    object-fit: cover;
+    width: 100%; /* Faz a imagem ocupar toda a largura do card. */
+    height: auto; /* Mantém a proporção da imagem ajustando a altura automaticamente. */
+    aspect-ratio: 2 / 3; /* Força a imagem a ter uma proporção de 2:3 (largura:altura). */
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço disponível, cortando se necessário. */
 }
 
 .book-card-content {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    padding: 1rem; /* Adiciona preenchimento ao conteúdo de texto do card. */
+    display: flex; /* Usa flexbox para o layout. */
+    flex-direction: column; /* Organiza os itens em coluna. */
+    flex-grow: 1; /* Faz esta área crescer para ocupar o espaço restante no card. */
 }
 
 .book-card-content h3 {
-    margin-top: 0;
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-top: 0; /* Remove a margem superior do título do livro. */
+    font-weight: 600; /* Define o peso da fonte do título. */
+    font-size: 1rem; /* Define o tamanho da fonte do título. */
+    color: var(--primary-color); /* Define a cor do título. */
+    margin-bottom: 0.5rem; /* Adiciona uma margem abaixo do título. */
 }
 
 .book-card-content a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 200;
-    margin-top: auto;
+    color: var(--primary-color); /* Define a cor do link "Ver mais". */
+    text-decoration: none; /* Remove o sublinhado padrão do link. */
+    font-weight: 200; /* Define o peso da fonte do link (bem leve). */
+    margin-top: auto; /* Empurra o link para a parte inferior do card. */
 }
 
 .book-card-content a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse sobre o link. */
 }
 
 #back-to-top-btn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 18px;
-    transition: background-color 0.3s, transform 0.3s;
+    display: none; /* Oculta o botão por padrão. */
+    position: fixed; /* Fixa o botão na tela, independente da rolagem. */
+    bottom: 20px; /* Posiciona o botão a 20px da parte inferior da tela. */
+    right: 30px; /* Posiciona o botão a 30px da parte direita da tela. */
+    z-index: 99; /* Garante que o botão fique acima da maioria dos outros elementos. */
+    border: none; /* Remove a borda. */
+    outline: none; /* Remove o contorno de foco. */
+    background-color: var(--primary-color); /* Define a cor de fundo. */
+    color: var(--bg-color); /* Define a cor do ícone/texto. */
+    cursor: pointer; /* Muda o cursor para "mãozinha". */
+    padding: 15px; /* Adiciona preenchimento interno. */
+    border-radius: 10px; /* Arredonda as bordas. */
+    font-size: 18px; /* Define o tamanho do ícone/texto. */
+    transition: background-color 0.3s, transform 0.3s; /* Adiciona transições suaves. */
 }
 
 #back-to-top-btn:hover {
-    background-color: var(--tertiary-color);
-    transform: scale(1.1);
+    background-color: var(--tertiary-color); /* Muda a cor de fundo ao passar o mouse. */
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho do botão no hover. */
 }
 
 .footer {
-    position: relative;
-    margin-top: 2rem;
+    position: relative; /* Define o contexto de posicionamento para elementos filhos. */
+    margin-top: 2rem; /* Adiciona uma margem no topo do rodapé. */
+    background-color: var(--header-footer-bg); /* Define a cor de fundo do rodapé. */
+    padding: 2rem 1rem; /* Adiciona preenchimento interno. */
 }
 
 .footer-links {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    list-style: none; /* Remove os marcadores de lista (bolinhas). */
+    display: flex; /* Usa flexbox para alinhar os links. */
+    flex-wrap: wrap; /* Permite que os links quebrem para a próxima linha se não houver espaço. */
+    justify-content: center; /* Centraliza os links horizontalmente. */
+    gap: 15px; /* Adiciona um espaçamento entre os links. */
 }
 
 .footer-links a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    transition: color 0.2s;
+    color: var(--secondary-color); /* Define a cor do texto dos links. */
+    text-decoration: none; /* Remove o sublinhado. */
+    transition: color 0.2s; /* Adiciona uma transição suave para a cor do texto. */
 }
 
 .footer-links a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Muda a cor do texto do link ao passar o mouse. */
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8);
-    animation: fadeIn 0.3s ease-in-out;
+    display: none; /* Oculta o modal por padrão. */
+    position: fixed; /* Fixa o modal na tela. */
+    z-index: 100; /* Garante que o modal fique acima de todos os outros elementos. */
+    left: 0; /* Ocupa toda a largura a partir da esquerda. */
+    top: 0; /* Ocupa toda a altura a partir do topo. */
+    width: 100%; /* Define a largura para 100% da tela. */
+    height: 100%; /* Define a altura para 100% da tela. */
+    overflow: auto; /* Adiciona rolagem se o conteúdo do modal for muito grande. */
+    background-color: rgba(0,0,0,0.8); /* Cria um fundo escuro e semitransparente. */
+    animation: fadeIn 0.3s ease-in-out; /* Aplica uma animação de fade-in ao aparecer. */
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; } /* Define o estado inicial da animação (totalmente transparente). */
+    to { opacity: 1; } /* Define o estado final da animação (totalmente opaco). */
 }
 
 .modal-content {
-    background-color: var(--bg-color);
-    margin: 5% auto;
-    padding: 2rem;
-    border: 1px solid var(--tertiary-color);
-    width: 90%;
-    max-width: 800px;
-    border-radius: 10px;
-    position: relative;
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
+    background-color: var(--bg-color); /* Define a cor de fundo do conteúdo do modal. */
+    margin: 5% auto; /* Centraliza o modal verticalmente (com margem no topo) e horizontalmente. */
+    padding: 2rem; /* Adiciona preenchimento interno. */
+    border: 1px solid var(--tertiary-color); /* Adiciona uma borda. */
+    width: 90%; /* Define a largura para 90% da tela. */
+    max-width: 800px; /* Define uma largura máxima para o modal. */
+    border-radius: 10px; /* Arredonda as bordas. */
+    position: relative; /* Necessário para posicionar o botão de fechar. */
+    display: flex; /* Usa flexbox para o layout interno. */
+    gap: 2rem; /* Adiciona um espaço entre a imagem e o texto. */
+    align-items: flex-start; /* Alinha a imagem e o texto no topo. */
 }
 
 .close-button {
-    color: var(--secondary-color);
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.2s ease;
+    color: var(--secondary-color); /* Define a cor do 'X' para fechar. */
+    position: absolute; /* Posiciona o botão em relação ao .modal-content. */
+    top: 1rem; /* Distância do topo. */
+    right: 1.5rem; /* Distância da direita. */
+    font-size: 28px; /* Tamanho do 'X'. */
+    font-weight: bold; /* Deixa o 'X' em negrito. */
+    cursor: pointer; /* Muda o cursor para "mãozinha". */
+    transition: color 0.2s ease; /* Adiciona uma transição suave para a cor. */
 }
 
 .close-button:hover,
 .close-button:focus {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Muda a cor do 'X' ao passar o mouse ou focar. */
 }
 
 #modal-book-image {
-    width: 250px;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
+    width: 250px; /* Define uma largura fixa para a imagem do livro no modal. */
+    height: auto; /* Mantém a proporção da imagem. */
+    border-radius: 8px; /* Arredonda as bordas da imagem. */
+    object-fit: cover; /* Garante que a imagem cubra o espaço, cortando se necessário. */
 }
 
 .modal-book-text {
-    flex: 1;
-    max-height: 400px;
-    overflow-y: auto;
-    padding-right: 1rem;
+    flex: 1; /* Faz a área de texto ocupar o espaço restante. */
+    max-height: 400px; /* Define uma altura máxima para a área de texto. */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o texto for muito longo. */
+    padding-right: 1rem; /* Adiciona um preenchimento à direita para não colar na barra de rolagem. */
 }
 
 .modal-book-text::-webkit-scrollbar {
-    width: 8px;
+    width: 8px; /* Define a largura da barra de rolagem (para navegadores Webkit como Chrome/Safari). */
 }
 
 .modal-book-text::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
+    background: #f1f1f1; /* Define a cor do trilho da barra de rolagem. */
+    border-radius: 10px; /* Arredonda o trilho. */
 }
 
 .modal-book-text::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
+    background: #888; /* Define a cor da alça da barra de rolagem. */
+    border-radius: 10px; /* Arredonda a alça. */
 }
 
 .modal-book-text::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #555; /* Escurece a alça ao passar o mouse sobre ela. */
 }
 
 #modal-book-title {
-    margin-top: 0;
-    color: var(--primary-color);
+    margin-top: 0; /* Remove a margem do topo do título do modal. */
+    color: var(--primary-color); /* Define a cor do título. */
 }
 
 #modal-book-synopsis {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-top: 1rem;
-    color: var(--secondary-color);
+    font-size: 1rem; /* Define o tamanho da fonte da sinopse. */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor legibilidade. */
+    margin-top: 1rem; /* Adiciona uma margem acima da sinopse. */
+    color: var(--secondary-color); /* Define a cor do texto da sinopse. */
 }
 
 .loading-indicator {
-    display: none;
-    text-align: center;
-    padding: 2rem;
-    font-size: 1.5rem;
+    display: none; /* Oculta o indicador de carregamento por padrão. */
+    text-align: center; /* Centraliza o texto. */
+    padding: 2rem; /* Adiciona preenchimento. */
+    font-size: 1.5rem; /* Define o tamanho da fonte. */
 }
 
 .no-results, .error {
-    text-align: center;
-    padding: 2rem;
-    font-size: 1.2rem;
-    color: var(--tertiary-color);
+    text-align: center; /* Centraliza o texto de "nenhum resultado" ou "erro". */
+    padding: 2rem; /* Adiciona preenchimento. */
+    font-size: 1.2rem; /* Define o tamanho da fonte. */
+    color: var(--tertiary-color); /* Define a cor do texto. */
 }
 
+/* Media Query para telas menores (tablets) */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        padding: 1rem;
+        flex-direction: column; /* Empilha os itens do cabeçalho verticalmente. */
+        padding: 1rem; /* Reduz o preenchimento do cabeçalho. */
     }
 
     header h1 {
-        text-align: center;
-        margin-bottom: 1rem;
+        text-align: center; /* Centraliza o título. */
+        margin-bottom: 1rem; /* Adiciona margem abaixo do título. */
     }
 
     div input {
-        width: 90vw;
-        font-size: 1.2rem;
+        width: 90vw; /* Faz o campo de busca ocupar 90% da largura da tela. */
+        font-size: 1.2rem; /* Reduz o tamanho da fonte do campo de busca. */
     }
 
     main {
-        padding: 0 1rem;
+        padding: 0 1rem; /* Adiciona preenchimento lateral ao conteúdo principal. */
     }
 
     article:hover {
-        transform: none;
+        transform: none; /* Remove o efeito de hover nos cards para evitar problemas em telas de toque. */
     }
 
     .modal-content {
-        flex-direction: column;
-        align-items: center;
-        padding: 1.5rem;
+        flex-direction: column; /* Empilha o conteúdo do modal verticalmente. */
+        align-items: center; /* Centraliza o conteúdo do modal. */
+        padding: 1.5rem; /* Reduz o preenchimento. */
     }
 
     #modal-book-image {
-        width: 60%;
-        max-width: 200px;
+        width: 60%; /* Define a largura da imagem do modal. */
+        max-width: 200px; /* Define uma largura máxima para a imagem. */
     }
 
     #modal-book-title,
     #modal-book-description,
     #modal-book-synopsis {
-        text-align: center;
+        text-align: center; /* Centraliza todo o texto dentro do modal. */
     }
 }
 
+/* Media Query para telas muito pequenas (celulares) */
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1rem;
-        max-width: 70%;
-        word-wrap: break-word;
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte do título. */
+        max-width: 70%; /* Limita a largura do título. */
+        word-wrap: break-word; /* Permite que o título quebre em várias linhas se for muito longo. */
     }
 
     div input,
     div input::placeholder {
-        font-size: 1rem;
+        font-size: 1rem; /* Reduz o tamanho da fonte do campo de busca e do placeholder. */
     }
 
     article h2 {
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* Reduz o tamanho da fonte dos títulos dos artigos. */
     }
 
     div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 0.5rem;
+        display: flex; /* Garante que o contêiner da busca seja flex. */
+        align-items: center; /* Centraliza os itens. */
+        justify-content: center; /* Centraliza os itens. */
+        flex-direction: column; /* Empilha os itens verticalmente. */
+        gap: 0.5rem; /* Reduz o espaçamento entre os itens. */
     }
 
     .footer {
-        display: none;
+        display: none; /* Oculta o rodapé em telas muito pequenas para economizar espaço. */
     }
 
     button {
-        margin-top: 1rem;
+        margin-top: 1rem; /* Adiciona uma margem no topo dos botões. */
     }
 }
