@@ -179,7 +179,7 @@ main > h1 {
     --primary-color
   ); /* Define a cor do texto dos títulos das séries. */
   border-bottom: 2px solid var(--primary-color); /* Adiciona uma linha de borda abaixo do título. */
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   padding-bottom: 0.5rem; /* Adiciona um espaçamento entre o texto e a borda inferior. */
   margin-bottom: 1.5rem; /* Adiciona uma margem abaixo do título. */
 }
