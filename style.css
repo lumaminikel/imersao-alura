@@ -468,6 +468,7 @@ main {
 
   .side-menu.active {
     transform: translateX(0); /* Traz o menu para a tela */
+    z-index: 102; /* Garante que o menu fique sobre o ícone do hambúrguer */
   }
 
   .main-content {
