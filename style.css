@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box; /* Define o modelo de caixa para todos os elementos, onde padding e border são incluídos na largura e altura totais. */
+  margin: 0rem;
+  padding: 0rem;
 }
 
 :root {
@@ -70,7 +72,7 @@ html {
 }
 
 header {
-  padding: 2rem 1rem; /* Adiciona preenchimento interno (2rem em cima/baixo, 1rem nas laterais). */
+  padding: 0.75rem 1rem; /* Ajusta o preenchimento vertical para um valor mais enxuto. */
   display: flex; /* Usa o modelo de layout flexbox para alinhar os itens. */
   align-items: center; /* Centraliza os itens verticalmente. */
   justify-content: space-around; /* Distribui os itens com espaço igual ao redor deles. */
@@ -144,12 +146,14 @@ div input:focus {
 
 /* Ajuste para o conteúdo principal não ficar embaixo do menu */
 .main-content {
-  margin-left: 0; /* Remove a margem, já que o menu é flutuante */
-  padding: 150px 16px 1px; /* Adiciona padding no topo para não ficar atrás do header fixo */
+  /* Este contêiner agora só precisa se preocupar com o menu lateral */
   margin-right: 16rem; /* Adiciona margem para não sobrepor o menu lateral */
 }
 
 main {
+  /* Adiciona padding no topo para não ficar atrás do header fixo. 100px é um valor seguro. */
+  padding-top: 100px;
+  padding-left: 1rem; /* Adiciona preenchimento lateral para afastar o conteúdo da borda. */
   overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura. */
   max-width: 80rem; /* Define a largura máxima do conteúdo principal. */
   margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente. */
@@ -525,7 +529,8 @@ main > h1 {
   }
 
   main {
-    padding: 0 1rem; /* Adiciona preenchimento lateral ao conteúdo principal. */
+    padding: 1rem; /* Adiciona preenchimento lateral ao conteúdo principal. */
+    padding-top: 0;
   }
 
   article:hover {
