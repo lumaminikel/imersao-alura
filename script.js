@@ -217,15 +217,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const adjustContentPadding = () => {
-    const header = document.querySelector("header");
-    if (header) {
-      const headerHeight = header.offsetHeight;
-      mainContent.style.paddingTop = `${headerHeight + 20}px`; // Adiciona 20px de margem extra
-    }
-  };
+  // const adjustContentPadding = () => {
+  //   const header = document.querySelector("header");
+  //   if (header) {
+  //     const headerHeight = header.offsetHeight;
+  //     mainContent.style.paddingTop = `${headerHeight + 20}px`; // Adiciona 20px de margem extra
+  //   }
+  // };
 
-  window.addEventListener("resize", adjustContentPadding); // Ajusta o padding ao redimensionar a janela.
+  // window.addEventListener("resize", adjustContentPadding); // Ajusta o padding ao redimensionar a janela.
 
   const toggleMenu = () => {
     sideMenu.classList.toggle("active"); // Adiciona ou remove a classe 'active' do menu.
@@ -248,5 +248,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   backToTopButton.addEventListener("click", scrollToTop); // Adiciona um evento de clique no botão "Voltar ao Topo" para executar a rolagem.
-  adjustContentPadding(); // Chama a função uma vez no carregamento inicial.
+  // adjustContentPadding(); // Chama a função uma vez no carregamento inicial.
 });
