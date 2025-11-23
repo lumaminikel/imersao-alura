@@ -1,47 +1,61 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!-- Declara o tipo de documento como HTML5, a versão mais recente do HTML. -->
+<html lang="pt-br"> <!-- Inicia o documento HTML e define o idioma principal da página como português do Brasil. -->
 
 <head>
     <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres como UTF-8, que suporta a maioria dos caracteres e símbolos. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Garante que a página seja responsiva e se ajuste bem a diferentes tamanhos de tela. -->
     <link rel="stylesheet" href="style.css">
+    <!-- Vincula o arquivo de estilos CSS externo (style.css) para estilizar a página. -->
     <script src="script.js" defer></script>
-    <title>Base de Conhecimento</title>
+    <!-- Vincula o arquivo JavaScript (script.js) e o atributo 'defer' faz com que ele seja executado após o HTML ser totalmente carregado. -->
+    <title>Base de Conhecimento</title> <!-- Define o título que aparece na aba ou na janela do navegador. -->
 </head>
 
 <body>
-    <header>
-        <h1>Riordanverso</h1>
-        <div>
+    <header> <!-- Define o cabeçalho da página, geralmente contendo o título principal e a navegação. -->
+        <h1>Riordanverso</h1> <!-- Título principal da página, exibido de forma destacada. -->
+        <div> <!-- Um contêiner genérico para agrupar o campo de busca e o botão. -->
             <input type="text" placeholder="Busque por livros, personagens, etc.">
+            <!-- Cria um campo de texto para o usuário digitar a busca. O 'placeholder' é o texto que aparece antes da digitação. -->
             <button id="botao-busca">Buscar</button>
+            <!-- Cria um botão clicável com o texto "Buscar". O 'id' é usado para identificá-lo no JavaScript. -->
         </div>
     </header>
-    <main>
+    <main> <!-- Define o conteúdo principal e central da página. -->
         <div class="loading-indicator">Carregando...</div>
+        <!-- Um contêiner para mostrar a mensagem "Carregando..." enquanto os livros são carregados. -->
         <section class="book-container">
+            <!-- Uma seção que servirá como contêiner principal para exibir os cards dos livros. -->
         </section>
     </main>
 
     <button id="back-to-top-btn" title="Voltar ao topo">&uarr;</button>
+    <!-- Cria um botão para "Voltar ao Topo". O 'title' mostra uma dica ao passar o mouse. O '&uarr;' é o código para a seta para cima. -->
 
-    <footer class="footer">
-        <ul class="footer-links">
-            <li>
+    <footer class="footer"> <!-- Define o rodapé da página. -->
+        <ul class="footer-links"> <!-- Cria uma lista não ordenada para os links do rodapé. -->
+            <li> <!-- Item da lista. -->
                 <a href="https://rickriordan.com/">Site do Autor</a>
+                <!-- Cria um link (âncora) para o site oficial do autor. -->
             </li>
-            <li>
+            <li> <!-- Outro item da lista. -->
                 <a href="https://intrinseca.com.br/autor/rick-riordan">Editora</a>
+                <!-- Cria um link para a página da editora. -->
             </li>
         </ul>
     </footer>
-    <div id="book-modal" class="modal">
-        <div class="modal-content">
+    <div id="book-modal" class="modal"> <!-- Contêiner principal para a janela modal, que fica oculta por padrão. -->
+        <div class="modal-content"> <!-- Contêiner para o conteúdo dentro do modal. -->
             <span class="close-button">&times;</span>
+            <!-- Botão para fechar o modal, estilizado como um 'X' (&times;). -->
             <img id="modal-book-image" src="" alt="Capa do livro">
-            <div class="modal-book-text">
-                <h2 id="modal-book-title"></h2>
+            <!-- Elemento de imagem que exibirá a capa do livro selecionado. 'src' será preenchido via JavaScript. -->
+            <div class="modal-book-text"> <!-- Contêiner para o texto dentro do modal. -->
+                <h2 id="modal-book-title"></h2> <!-- Título do livro no modal, a ser preenchido via JavaScript. -->
                 <div id="modal-book-synopsis"></div>
+                <!-- Contêiner para a sinopse do livro no modal, a ser preenchido via JavaScript. -->
             </div>
         </div>
     </div>
