@@ -151,6 +151,7 @@ div input:focus {
 .main-content {
   margin-left: 0; /* Remove a margem, já que o menu é flutuante */
   padding: 150px 16px 1px; /* Adiciona padding no topo para não ficar atrás do header fixo */
+  margin-right: 16rem; /* Adiciona margem para não sobrepor o menu lateral */
 }
 
 main {
@@ -472,6 +473,7 @@ main {
 
   .main-content {
     margin-left: 0; /* Remove a margem quando o menu está escondido */
+    margin-right: 0; /* Remove a margem direita em telas menores */
     padding-top: 250px; /* Aumenta o padding no topo para compensar o header maior */
   }
 
