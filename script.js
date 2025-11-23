@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Garante que o script só será executado após o carregamento completo do HTML da página.
   const bookContainer = document.querySelector(".book-container"); // Seleciona o contêiner principal onde os livros serão exibidos.
+  const collectionsList = document.getElementById("collections-list"); // Seleciona a lista do menu lateral.
   const searchInput = document.querySelector('input[type="text"]'); // Seleciona o campo de busca.
   const loadingIndicator = document.querySelector(".loading-indicator"); // Seleciona o elemento que mostra a mensagem "Carregando...".
   const modal = document.getElementById("book-modal"); // Seleciona a janela modal pelo seu ID.
   const closeModalButton = document.querySelector(".close-button"); // Seleciona o botão de fechar ('X') do modal.
   const backToTopButton = document.getElementById("back-to-top-btn"); // Seleciona o botão "Voltar ao Topo".
+  const hamburgerMenu = document.getElementById("hamburger-menu"); // Seleciona o botão hambúrguer.
+  const sideMenu = document.getElementById("side-menu"); // Seleciona o menu lateral.
+  const closeMenuButton = document.getElementById("close-menu-btn"); // Seleciona o botão de fechar do menu.
+  const mainContent = document.querySelector(".main-content"); // Seleciona o contêiner do conteúdo principal.
 
   let allSeries = []; // Declara um array vazio que armazenará todos os dados dos livros após serem carregados do JSON.
 
@@ -61,14 +66,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const renderSeries = (series) => {
     // Função principal que renderiza (desenha) as séries e os livros na tela.
     bookContainer.innerHTML = ""; // Limpa o contêiner de livros para evitar conteúdo duplicado.
+    collectionsList.innerHTML = ""; // Limpa a lista de coleções para evitar duplicação.
+
     if (series.length === 0) {
       // Verifica se não há séries para exibir (ex: resultado de busca vazio).
       bookContainer.innerHTML =
         '<p class="no-results">Nenhum resultado encontrado.</p>'; // Exibe uma mensagem de "nenhum resultado".
       return; // Encerra a função.
     }
-    series.forEach((serie) => {
+    series.forEach((serie, index) => {
       // Itera sobre cada objeto de série no array.
+      const collectionId = `collection-${index}`; // Cria um ID único para a seção.
+
+      // Cria o item da lista no menu lateral
+      const listItem = document.createElement("li");
+      listItem.innerHTML = `<a href="#${collectionId}">${serie.title}</a>`;
+      collectionsList.appendChild(listItem);
+
       const seriesSection = document.createElement("section"); // Cria um elemento <section> para a série.
       seriesSection.classList.add("series-section"); // Adiciona a classe CSS para estilização.
 
@@ -76,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
       seriesTitle.textContent = serie.title; // Define o texto do título.
       seriesSection.appendChild(seriesTitle); // Adiciona o título à seção da série.
 
+      seriesSection.id = collectionId; // Atribui o ID à seção para a âncora do menu funcionar.
       const bookGrid = document.createElement("div"); // Cria uma <div> para a grade de livros.
       bookGrid.classList.add("book-grid"); // Adiciona a classe CSS para o layout de grade.
 
@@ -89,14 +104,15 @@ document.addEventListener("DOMContentLoaded", () => {
             ? book.description.substring(0, 100) + "..."
             : book.description; // Cria uma descrição curta (máximo 100 caracteres).
 
-        bookCard.innerHTML = ` // Preenche o conteúdo do card usando um template literal.
+        bookCard.innerHTML = `
                     <img src="${book.image_url}" alt="${book.title}">
                     <div class="book-card-content">
                         <h3>${book.title}</h3>
                         <p class="book-description">${shortDescription}</p>
                         <a href="#" class="read-more">Saiba mais</a>
                     </div>
-                `;
+                `; // Preenche o conteúdo do card usando um template literal.
+                
         bookCard.querySelector(".read-more").addEventListener("click", (e) => {
           // Adiciona um evento de clique ao link "Saiba mais".
           e.preventDefault(); // Impede que o link recarregue a página.
@@ -145,6 +161,43 @@ document.addEventListener("DOMContentLoaded", () => {
       allSeries = data.series; // Armazena os dados das séries na variável global 'allSeries'.
       renderSeries(allSeries); // Renderiza todas as séries na tela pela primeira vez.
       showLoading(false); // Esconde o indicador de carregamento.
+
+      // --- INÍCIO DA LÓGICA DE SCROLL SPY ---
+      // Agora que as seções e o menu foram criados, podemos selecioná-los.
+      const sections = document.querySelectorAll(".series-section");
+      const menuLinks = document.querySelectorAll(".side-menu li a");
+
+      // Se não houver seções ou links, não faz nada.
+      if (sections.length === 0 || menuLinks.length === 0) {
+        return;
+      }
+
+      const activateMenuLinkOnScroll = () => {
+        let currentSectionId = "";
+        const headerOffset = 160; // Espaço para o header fixo
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const pageHeight = document.documentElement.scrollHeight;
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (scrollPosition >= sectionTop - headerOffset) {
+            currentSectionId = section.getAttribute("id");
+          }
+        });
+
+        // Caso especial: Se o usuário rolou até o final da página, ativa o último item.
+        if (scrollPosition + windowHeight >= pageHeight - 10) { // -10 para uma pequena margem de erro
+          currentSectionId = sections[sections.length - 1].getAttribute("id");
+        }
+
+        menuLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${currentSectionId}`);
+        });
+      };
+
+      window.addEventListener("scroll", activateMenuLinkOnScroll);
+      // --- FIM DA LÓGICA DE SCROLL SPY ---
     })
     .catch((error) => {
       // Se ocorrer qualquer erro durante o fetch ou a conversão...
@@ -163,6 +216,30 @@ document.addEventListener("DOMContentLoaded", () => {
       closeModal(); // Se sim, fecha o modal.
     }
   });
+
+  const adjustContentPadding = () => {
+    const header = document.querySelector("header");
+    if (header) {
+      const headerHeight = header.offsetHeight;
+      mainContent.style.paddingTop = `${headerHeight + 20}px`; // Adiciona 20px de margem extra
+    }
+  };
+
+  window.addEventListener("resize", adjustContentPadding); // Ajusta o padding ao redimensionar a janela.
+
+  const toggleMenu = () => {
+    sideMenu.classList.toggle("active"); // Adiciona ou remove a classe 'active' do menu.
+  };
+
+  // Eventos para o menu hambúrguer
+  hamburgerMenu.addEventListener("click", toggleMenu); // Abre/fecha o menu ao clicar no hambúrguer.
+  closeMenuButton.addEventListener("click", toggleMenu); // Fecha o menu ao clicar no 'X'.
+  collectionsList.addEventListener("click", (event) => {
+    // Fecha o menu ao clicar em um item da lista.
+    if (event.target.tagName === "A") {
+      toggleMenu();
+    }
+  });
   window.addEventListener("keydown", (event) => {
     // Adiciona um evento que escuta as teclas pressionadas.
     if (event.key === "Escape") {
@@ -171,4 +248,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   backToTopButton.addEventListener("click", scrollToTop); // Adiciona um evento de clique no botão "Voltar ao Topo" para executar a rolagem.
+  adjustContentPadding(); // Chama a função uma vez no carregamento inicial.
 });

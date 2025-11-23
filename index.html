@@ -8,38 +8,26 @@
     <!-- Garante que a página seja responsiva e se ajuste bem a diferentes tamanhos de tela. -->
     <link rel="stylesheet" href="style.css">
     <!-- Vincula o arquivo de estilos CSS externo (style.css) para estilizar a página. -->
-    <script src="script.js" defer></script>
-    <!-- Vincula o arquivo JavaScript (script.js) e o atributo 'defer' faz com que ele seja executado após o HTML ser totalmente carregado. -->
+    <script src="script.js" defer></script> <!-- Vincula o arquivo JavaScript (script.js) e o atributo 'defer' faz com que ele seja executado após o HTML ser totalmente carregado. -->
     <title>Base de Conhecimento</title> <!-- Define o título que aparece na aba ou na janela do navegador. -->
 </head>
 
 <body>
-    <header> <!-- Define o cabeçalho da página, geralmente contendo o título principal e a navegação. -->
-        <h1>Riordanverso</h1> <!-- Título principal da página, exibido de forma destacada. -->
-        <div> <!-- Um contêiner genérico para agrupar o campo de busca e o botão. -->
-            <input type="text" placeholder="Busque por livros, personagens, etc.">
-            <!-- Cria um campo de texto para o usuário digitar a busca. O 'placeholder' é o texto que aparece antes da digitação. -->
-            <button id="botao-busca">Buscar</button>
-            <!-- Cria um botão clicável com o texto "Buscar". O 'id' é usado para identificá-lo no JavaScript. -->
-        </div>
-    </header>
-    <main> <!-- Define o conteúdo principal e central da página. -->
-        <div class="loading-indicator">Carregando...</div>
-        <!-- Um contêiner para mostrar a mensagem "Carregando..." enquanto os livros são carregados. -->
-        <section class="book-container">
-            <!-- Uma seção que servirá como contêiner principal para exibir os cards dos livros. -->
-        </section>
-    </main>
     <nav id="side-menu" class="side-menu"> <!-- Menu de navegação lateral. -->
+        <button id="close-menu-btn" class="close-menu-btn">&times;</button> <!-- Botão para fechar o menu em mobile -->
         <ul id="collections-list"> <!-- Lista para as coleções de livros. -->
             <!-- Os itens da lista (coleções) serão adicionados aqui via JavaScript. -->
         </ul>
     </nav>
-
     <div class="main-content"> <!-- Contêiner principal que agrupa o cabeçalho e o conteúdo. -->
         <header> <!-- Define o cabeçalho da página, geralmente contendo o título principal e a navegação. -->
+            <button id="hamburger-menu" class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <h1>Riordanverso</h1> <!-- Título principal da página, exibido de forma destacada. -->
-            <div> <!-- Um contêiner genérico para agrupar o campo de busca e o botão. -->
+            <div class="search-container"> <!-- Contêiner para agrupar o campo de busca e o botão. -->
                 <input type="text" placeholder="Busque por livros, personagens, etc.">
                 <!-- Cria um campo de texto para o usuário digitar a busca. O 'placeholder' é o texto que aparece antes da digitação. -->
                 <button id="botao-busca">Buscar</button>

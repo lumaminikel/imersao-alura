@@ -22,13 +22,61 @@ body {
   font-family: "Quicksand", sans-serif; /* Define a família de fontes para todo o corpo da página. */
 }
 
+html {
+  scroll-behavior: smooth; /* Rolagem suave para âncoras */
+  scroll-padding-top: 150px; /* Ajusta o ponto de parada da rolagem para não cobrir o conteúdo com o header */
+}
+
+/* Estilos para o menu lateral */
+.side-menu {
+  width: 15rem; /* Largura do menu */
+  position: fixed; /* Fixo na tela */
+  top: 50%; /* Posiciona o topo do menu no meio da tela */
+  right: 10px; /* Distância da borda direita */
+  transform: translateY(-50%); /* Move o menu para cima pela metade de sua altura para centralizá-lo de fato */
+  background-color: white; /* Cor de fundo branca */
+  padding: 15px 0; /* Adiciona preenchimento vertical */
+  overflow-y: auto; /* Adiciona scroll se o conteúdo for grande */
+  z-index: 90; /* Garante que o menu fique acima do conteúdo */
+  border-radius: 8px; /* Arredonda as bordas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra suave */
+  max-height: 70vh; /* Define uma altura máxima para o menu */
+}
+
+.side-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--header-footer-bg); /* Cor do texto do menu */
+  font-weight: 500;
+  font-size: 0.7rem;
+  transition: background-color 0.2s ease;
+}
+
+.side-menu li a:hover {
+  background-color: #f0f0f0; /* Cor de fundo mais clara para o hover */
+}
+
+.side-menu li a.active {
+  background-color: var(--header-footer-bg); /* Fundo escuro para o item ativo */
+  color: var(--primary-color); /* Cor do texto dourada */
+  font-weight: 700; /* Deixa a fonte mais forte */
+}
+
 header {
   padding: 2rem 1rem; /* Adiciona preenchimento interno (2rem em cima/baixo, 1rem nas laterais). */
   display: flex; /* Usa o modelo de layout flexbox para alinhar os itens. */
   align-items: center; /* Centraliza os itens verticalmente. */
   justify-content: space-around; /* Distribui os itens com espaço igual ao redor deles. */
-  position: sticky; /* Faz o cabeçalho "grudar" no topo da tela ao rolar. */
+  position: fixed; /* Faz o cabeçalho ficar fixo no topo da tela. */
   top: 0; /* Define a posição do cabeçalho fixo no topo. */
+  width: 100%; /* Garante que o cabeçalho ocupe toda a largura. */
   background: var(--header-footer-bg); /* Define a cor de fundo do cabeçalho. */
   z-index: 10; /* Garante que o cabeçalho fique acima de outros elementos. */
   border-bottom: 1px solid var(--bg-color); /* Adiciona uma borda inferior sutil. */
@@ -99,20 +147,21 @@ div input:focus {
   ); /* Cria um efeito de clique diminuindo levemente o tamanho do botão. */
 }
 
+/* Ajuste para o conteúdo principal não ficar embaixo do menu */
+.main-content {
+  margin-left: 0; /* Remove a margem, já que o menu é flutuante */
+  padding: 150px 16px 1px; /* Adiciona padding no topo para não ficar atrás do header fixo */
+}
+
 main {
   overflow-y: auto; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura. */
   max-width: 80rem; /* Define a largura máxima do conteúdo principal. */
   margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente. */
-  margin-top: 2rem; /* Adiciona uma margem no topo. */
   height: auto; /* Permite que a altura se ajuste ao conteúdo. */
 }
 
 .book-container {
   padding: 1rem; /* Adiciona preenchimento ao contêiner dos livros. */
-}
-
-.series-section {
-  margin-bottom: 3rem; /* Adiciona uma margem na parte inferior de cada seção de série. */
 }
 
 .series-section h2 {
@@ -129,7 +178,7 @@ main {
   display: grid; /* Usa o modelo de layout de grade. */
   grid-template-columns: repeat(
     auto-fill,
-    minmax(180px, 1fr)
+    minmax(220px, 1fr)
   ); /* Cria colunas responsivas: elas terão no mínimo 180px e se ajustarão para preencher o espaço. */
   gap: 1.5rem; /* Adiciona um espaçamento entre os cards de livros. */
 }
@@ -171,6 +220,13 @@ main {
   font-size: 1rem; /* Define o tamanho da fonte do título. */
   color: var(--primary-color); /* Define a cor do título. */
   margin-bottom: 0.5rem; /* Adiciona uma margem abaixo do título. */
+  min-height: 1.5rem; /* Garante que o título ocupe espaço equivalente a duas linhas para alinhamento. */
+}
+
+.book-card-content p {
+  font-size: 0.875rem; /* Define o tamanho da fonte para a descrição. */
+  flex-grow: 1; /* Permite que a descrição ocupe o espaço disponível. */
+  margin-bottom: 1rem; /* Adiciona uma margem inferior. */
 }
 
 .book-card-content a {
@@ -357,11 +413,85 @@ main {
   color: var(--tertiary-color); /* Define a cor do texto. */
 }
 
+/* Estilos para o Menu Hambúrguer */
+.hamburger-menu, .close-menu-btn {
+  display: none; /* Escondidos por padrão em telas grandes */
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 101; /* Garante que fiquem acima de outros elementos */
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.close-menu-btn {
+  color: var(--header-footer-bg);
+  font-size: 2.5rem;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
 /* Media Query para telas menores (tablets) */
 @media (max-width: 768px) {
+  .hamburger-menu {
+    display: block; /* Mostra o botão hambúrguer */
+    position: absolute;
+    right: 1.5rem; /* Posiciona no lado direito */
+    top: 2.2rem; /* Ajusta a distância do topo */
+    transform: none; /* Remove a centralização vertical */
+  }
+
+  .close-menu-btn {
+    display: block; /* Mostra o botão de fechar dentro do menu */
+  }
+
+  .side-menu {
+    /* Transforma o menu em um painel que desliza da direita */
+    position: fixed; /* Garante que a posição seja fixa também em mobile */
+    transform: translateX(100%);
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .side-menu.active {
+    transform: translateX(0); /* Traz o menu para a tela */
+  }
+
+  .main-content {
+    margin-left: 0; /* Remove a margem quando o menu está escondido */
+    padding-top: 250px; /* Aumenta o padding no topo para compensar o header maior */
+  }
+
+  .series-section {
+    padding-top: 20px; /* Ajusta o padding para telas menores */
+    margin-top: 0;
+  }
+
   header {
     flex-direction: column; /* Empilha os itens do cabeçalho verticalmente. */
+    position: relative; /* Necessário para posicionar o botão hambúrguer */
     padding: 1rem; /* Reduz o preenchimento do cabeçalho. */
+  }
+
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Adiciona espaço entre o input e o botão */
+    width: 100%;
   }
 
   header h1 {
@@ -415,14 +545,6 @@ main {
 
   article h2 {
     font-size: 1.3rem; /* Reduz o tamanho da fonte dos títulos dos artigos. */
-  }
-
-  div {
-    display: flex; /* Garante que o contêiner da busca seja flex. */
-    align-items: center; /* Centraliza os itens. */
-    justify-content: center; /* Centraliza os itens. */
-    flex-direction: column; /* Empilha os itens verticalmente. */
-    gap: 0.5rem; /* Reduz o espaçamento entre os itens. */
   }
 
   .footer {
