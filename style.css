@@ -444,10 +444,9 @@ main {
 @media (max-width: 768px) {
   .hamburger-menu {
     display: block; /* Mostra o botão hambúrguer */
-    position: absolute;
-    right: 1.5rem; /* Posiciona no lado direito */
-    top: 2.2rem; /* Ajusta a distância do topo */
-    transform: none; /* Remove a centralização vertical */
+    /* O posicionamento será controlado pelo flexbox do header */
+    order: -1; /* Faz o hambúrguer aparecer antes do título */
+    margin-bottom: 1rem; /* Adiciona espaço abaixo dele */
   }
 
   .close-menu-btn {
@@ -484,7 +483,7 @@ main {
 
   header {
     flex-direction: column; /* Empilha os itens do cabeçalho verticalmente. */
-    position: relative; /* Necessário para posicionar o botão hambúrguer */
+    position: static; /* Remove o posicionamento fixo/relativo */
     padding: 1rem; /* Reduz o preenchimento do cabeçalho. */
   }
 
