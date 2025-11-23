@@ -501,7 +501,7 @@ main > h1 {
   .main-content {
     margin-left: 0; /* Remove a margem quando o menu está escondido */
     margin-right: 0; /* Remove a margem direita em telas menores */
-    padding-top: 130px; /* Garante espaço para o header que agora é estático */
+    padding-top: 80px; /* Garante espaço para o header que agora é estático */
   }
 
   .series-section {
